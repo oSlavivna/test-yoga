@@ -37,12 +37,17 @@ img {
   width: 100%;
 }
 
-ul {
+.menu-list {
   display: flex;
   gap: 42px;
   align-items: center;
 }
-
+.hamburger {
+  display: none;
+  width: 24px;
+  height: 24px;
+  background: url(./img/humburger.png);
+}
 li {
   font-size: 24px;
   line-height: 38px;
@@ -110,15 +115,15 @@ p {
   margin-top: -71px;
 }
 
+.atom {
+  display: none;
+}
+
 /* _______________________ */
 .made {
   text-align: center;
   margin: 20px auto;
-
-  width: 523px;
-  font-family: "Inter";
   font-weight: 700;
-
   line-height: 64px;
   color: #1c1e52;
 
@@ -126,12 +131,109 @@ p {
     bottom: 0; */
 }
 
-.task {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* мобільна версія
+як на мене при 390 виглядає 
+прям як у фігмі */
+@media screen and (max-width: 1024px) {
+  .menu-list {
+    display: none;
+  }
 
-  border: 2px solid red;
-  padding: 50px;
-  width: 200px;
+  .hamburger {
+    display: block;
+  }
+  .logo-brand {
+    gap: 15px;
+  }
+
+  .logo-img {
+    width: 56px;
+  }
+  .brand-name {
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .first-screen {
+    width: auto;
+    margin: 0;
+    /* padding-inline: 24%; */
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 32px;
+    /* or 133% */
+
+    text-align: center;
+    width: 100%;
+  }
+
+  .first-screen p {
+    width: 90%;
+    margin: 10px auto 0;
+    padding-inline: 10%;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+  .btn-know-more {
+    margin: 15px auto;
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+
+    padding: 12px 55px;
+  }
+
+  .main-img {
+    margin: 0 auto 24px;
+    width: 100%;
+  }
+
+  /* mobile add section */
+  .atom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 0.663073px solid #dedede;
+    border-radius: 6.63073px;
+    padding: 26px 0 40px;
+    width: 80%;
+    margin: auto;
+  }
+  .atom img {
+    /* margin: 0 auto; */
+    width: auto;
+  }
+  .atom h4 {
+    margin: 15px auto;
+    width: 40%;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    text-align: center;
+    letter-spacing: 0.0663073px;
+  }
+  .atom p {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 11.9353px;
+    line-height: 134%;
+
+    text-align: center;
+    letter-spacing: 0.132615px;
+
+    color: #5c5c5c;
+  }
 }
