@@ -130,7 +130,11 @@ p {
   /* position: absolute;
     bottom: 0; */
 }
-
+.ul-list {
+  background-color: #07b464;
+  display: block;
+  position: absolute;
+}
 /* мобільна версія
 як на мене при 390 виглядає 
 прям як у фігмі */
@@ -139,9 +143,27 @@ p {
     display: none;
   }
 
+  .menu-list.active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 5px;
+    margin-left: 10px;
+
+    justify-content: flex-end;
+  }
+  .menu-list li {
+    font-size: 16px;
+    line-height: 16px;
+   
+  }
+
   .hamburger {
     display: block;
+    cursor: pointer;
+     width: 24px;
   }
+
   .logo-brand {
     gap: 15px;
   }
@@ -236,4 +258,38 @@ p {
 
     color: #5c5c5c;
   }
+}
+@media screen and (max-width:390px) {
+  .menu-list.active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 4px;
+    margin-left: 10px;
+    width: 85%;
+    
+}
+
+  .menu-list li {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .hamburger {
+     width: 20px;
+  }
+
+  .logo-brand {
+    gap: 4px;
+  }
+
+  .logo-img {
+    width: 48px;
+  }
+  .brand-name {
+    font-size: 18px;
+    line-height: 16px;
+  }
+
+
 }
